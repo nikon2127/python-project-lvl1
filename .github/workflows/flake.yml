@@ -9,4 +9,5 @@ jobs:
       - name: cd projeck
         run:
           pip install poetry
+          poetry install
           poetry run flake8 brain_games
