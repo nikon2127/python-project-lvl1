@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: flake check
         run: pip install poetry
-        run: make lint
+        run: echo pwd
