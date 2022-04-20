@@ -6,7 +6,7 @@ jobs:
   my-jobs:
     runs-on: ubuntu-latest
     steps:
-      - name: cd projeck
+      - name: link flake
         run:
           pip install poetry
           make install
