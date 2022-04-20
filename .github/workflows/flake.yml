@@ -3,8 +3,8 @@ name: flake
 on: push
 
 jobs:
-  build:
+  my-jobs:
     runs-on: ubuntu-latest
     steps:
-      - name: flake check
-        run: echo pwd
+      - name: flakecheck
+        run: make lint
