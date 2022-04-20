@@ -7,4 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: flakecheck
+        run: cd Python-проект-lvl1
         run: make lint
