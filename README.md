@@ -4,3 +4,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d6f03406624b86a721f6/maintainability)](https://codeclimate.com/github/nikon2127/python-project-lvl1/maintainability)
 
 [![flake](https://github.com/nikon2127/python-project-lvl1/actions/workflows/flake.yml/badge.svg)](https://github.com/nikon2127/python-project-lvl1/actions/workflows/flake.yml)
+
+[!Asciinema]https://asciinema.org/a/2das2oRKSVt9hehHJJkZqzZKb
