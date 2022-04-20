@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: cd projeck
-        run: poetry run flake8 brain_games
+        run:
+          pip install poetry
+          poetry run flake8 brain_games
