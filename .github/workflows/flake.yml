@@ -1,0 +1,10 @@
+name: flake
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: flake check
+        run: make lint
