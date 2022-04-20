@@ -7,5 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: flake check
-        run: pip install poetry
         run: echo pwd
