@@ -6,6 +6,5 @@ jobs:
   my-jobs:
     runs-on: ubuntu-latest
     steps:
-      - name: flakecheck
-        run: cd Python-проект-lvl1
-        run: make lint
+      - name: cd projeck
+        run: poetry run flake8 brain_games
