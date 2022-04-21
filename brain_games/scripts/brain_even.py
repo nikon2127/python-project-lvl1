@@ -1,34 +1,25 @@
 #!usr/bin/env python3
-import prompt
-import random
+from brain_games.games.hello_games import hello
+from brain_games.games import game
 
 
 def main():
-    min_num = 1
-    max_num = 100
-    num = 0
+    name = hello()
     max_points = 3
     points = 0
 
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
     print('Answer "yes" if the number is even, otherwise answer "no".')
     while points < max_points:
-        num = random.randint(min_num, max_num)
-        print(f'Question: {num}')
-        input_user = prompt.string('Your answer: ')
-        if num % 2 == 0 and input_user == 'yes':
-            print('Correct!')
-        elif num % 2 != 0 and input_user == 'no':
-            print('Correct!')
+        input_user, num = game.even(1, 100)
+        if game.win_check(name, input_user, num) == 'Correct':
+            print(game.win_check(name, input_user, num))
         else:
-            print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-            print(f"Let's try again, {name}!")
+            print(game.win_check(name, input_user, num))
             break
         points += 1
         if points == max_points:
-            print(f'Congratulations, {name}!')
+            game.finish(name)
+            break
 
 
 if __name__ == '__main__':
