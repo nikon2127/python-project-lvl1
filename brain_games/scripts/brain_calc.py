@@ -7,7 +7,7 @@ def main():
     max_points = 3
     points = 0
 
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('What is the result of the expression?')
     while points < max_points:
         report, is_check_win = game.calc(name, 1, 10)
         print(report)

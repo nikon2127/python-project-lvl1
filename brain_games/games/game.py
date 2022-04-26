@@ -19,8 +19,7 @@ def even(name, min_num, max_num):
     elif num % 2 == 0:
         return (f"'{input_user}' is wrong answer ;(. Correct answer was 'yes'.\n\
 Let's try again, {name}!", False)
-    else:
-        return (f"'{input_user}' is wrong answer ;(. Correct answer was 'no'.\n\
+    return (f"'{input_user}' is wrong answer ;(. Correct answer was 'no'.\n\
 Let's try again, {name}!", False)
 
 
