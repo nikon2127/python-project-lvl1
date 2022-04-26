@@ -14,9 +14,7 @@ def main():
         if not is_check_win:
             break
         points += 1
-        if points == max_points:
-            print(game.finish(name))
-            break
+        game.finish(name, points, max_points)
 
 
 if __name__ == '__main__':

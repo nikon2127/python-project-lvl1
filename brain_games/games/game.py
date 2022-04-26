@@ -33,5 +33,6 @@ def win_check(name, input_user, correct_answer):
 Let's try again, {name}!", False)
 
 
-def finish(name):
-    return f'Congratulations, {name}!'
+def finish(name, point, max_point):
+    if point == max_point:
+        print(f'Congratulations, {name}!')
