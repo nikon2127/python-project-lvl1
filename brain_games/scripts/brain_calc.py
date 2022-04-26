@@ -1,6 +1,5 @@
 #!usr/bin/env python3
 from brain_games.games import game
-import random
 
 
 def main():
@@ -13,18 +12,7 @@ def main():
     print('What is the result of the expression?')
     # points = game.calc(name, 1, 10, max_points)
     while points < max_points:
-        num1 = random.randint(min_num, max_num)
-        num2 = random.randint(min_num, max_num)
-        operand_rand = random.randint(1, 3)
-        if operand_rand == 1:
-            correct_answer = num1 + num2
-            operand = '+'
-        elif operand_rand == 2:
-            correct_answer = num1 * num2
-            operand = '*'
-        else:
-            correct_answer = num1 - num2
-            operand = '-'
+        num1, num2, correct_answer, operand = game.calc(min_num, max_num)
         input_user = game.question(f'{num1}{operand}{num2}')
         if not game.is_win(name, input_user, correct_answer):
             break

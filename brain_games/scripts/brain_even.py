@@ -1,6 +1,5 @@
 #!usr/bin/env python3
 from brain_games.games import game
-import random
 
 
 def main():
@@ -13,9 +12,8 @@ def main():
     print('Answer "yes" if the number is even, otherwise answer "no".')
     # points = game.even(name, 1, 100, max_points)
     while points < max_points:
-        num = random.randint(min_num, max_num)
+        num, correct_answer = game.even(min_num, max_num)
         input_user = game.question(f'{num}')
-        correct_answer = 'yes' if num % 2 == 0 else 'no'
         if not game.is_win(name, input_user, correct_answer):
             break
         points += 1
