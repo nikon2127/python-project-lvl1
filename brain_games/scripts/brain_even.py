@@ -9,13 +9,13 @@ def main():
 
     print('Answer "yes" if the number is even, otherwise answer "no".')
     while points < max_points:
-        input_user, num = game.even(1, 100)
-        print(game.win_check(name, input_user, num))
-        if game.win_check(name, input_user, num) != 'Correct':
+        report, is_check_win = game.even(name, 1, 100)
+        print(report)
+        if not is_check_win:
             break
         points += 1
         if points == max_points:
-            game.finish(name)
+            print(game.finish(name))
             break
 
 

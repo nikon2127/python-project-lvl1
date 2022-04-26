@@ -9,18 +9,28 @@ def hello():
     return name
 
 
-def even(min_num, max_num):
+def even(name, min_num, max_num):
     num = random.randint(min_num, max_num)
     print(f'Question: {num}')
     input_user = prompt.string('Your answer: ')
-    return (input_user, num)
+    if (num % 2 == 0 and input_user == 'yes')\
+            or (num % 2 != 0 and input_user == 'no'):
+        return ('Correct!', True)
+    elif num % 2 == 0:
+        return (f"'{input_user}' is wrong answer ;(. Correct answer was 'yes'.\n\
+Let's try again, {name}!", False)
+    else:
+        return (f"'{input_user}' is wrong answer ;(. Correct answer was 'no'.\n\
+Let's try again, {name}!", False)
 
 
 def win_check(name, input_user, correct_answer):
-    if input_user == correct_answer:
-        return 'Correct!'
-    return f"'{input_user}' is wrong answer ;(. Correct answer was '{correct_answer}'.\n\
-    Let's try again, {name}!"
+    if input_user == correct_answer \
+        or (int(correct_answer) % 2 == 0 and input_user == 'yes') \
+            or (int(correct_answer) % 2 != 0 and input_user == 'no'):
+        return ('Correct!', True)
+    return (f"'{input_user}' is wrong answer ;(. Correct answer was '{correct_answer}'.\n\
+Let's try again, {name}!", False)
 
 
 def finish(name):
