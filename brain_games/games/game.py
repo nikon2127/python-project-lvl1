@@ -44,6 +44,24 @@ def gcd(min_num, max_num):
         i += 1
 
 
+def progression(min_num, max_num, min_step, max_step, row):
+    colon = random.randint(1, row)
+    step = random.randint(min_step, max_step)
+    start_num = random.randint(min_num, max_num)
+    quest = ''
+    i = 1
+    while i <= row:
+        start_num += step
+        quest += ' '
+        if i == colon:
+            quest += '..'
+            correct_answer = start_num
+        else:
+            quest += str(start_num)
+        i += 1
+    return (quest.strip(), correct_answer)
+
+
 def question(quest):
     print(f'Question: {quest}')
     return prompt.string('Your answer: ')
