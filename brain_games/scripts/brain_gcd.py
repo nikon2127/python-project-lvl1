@@ -11,8 +11,8 @@ def main():
 
     print('Find the greatest common divisor of given numbers.')
     while points < max_points:
-        num1, num2, correct_answer = game.gcd(min_num, max_num)
-        input_user = game.question(f'{num1} {num2}')
+        quest, correct_answer = game.gcd(min_num, max_num)
+        input_user = game.question(quest)
         if not game.is_win(name, input_user, correct_answer):
             break
         points += 1

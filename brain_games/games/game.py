@@ -40,7 +40,7 @@ def gcd(min_num, max_num):
     i = 1
     while i <= min_count:
         if min_count % i == 0 and max_count % (min_count // i) == 0:
-            return (num1, num2, min_count // i)
+            return (f'{num1} {num2}', min_count // i)
         i += 1
 
 
