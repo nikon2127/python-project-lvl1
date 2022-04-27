@@ -28,7 +28,7 @@ def calc(min_num, max_num):
     else:
         correct_answer = num1 - num2
         operand = '-'
-    return (num1, num2, correct_answer, operand)
+    return (f'{num1} {operand} {num2}', correct_answer)
 
 
 def gcd(min_num, max_num):
