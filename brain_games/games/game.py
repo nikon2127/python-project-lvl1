@@ -31,6 +31,19 @@ def calc(min_num, max_num):
     return (num1, num2, correct_answer, operand)
 
 
+def gcd(min_num, max_num):
+    num1 = random.randint(min_num, max_num)
+    num2 = random.randint(min_num, max_num)
+    max_count = max(num1, num2)
+    min_count = min(num1, num2)
+
+    i = 1
+    while i <= min_count:
+        if min_count % i == 0 and max_count % (min_count // i) == 0:
+            return (num1, num2, min_count // i)
+        i += 1
+
+
 def question(quest):
     print(f'Question: {quest}')
     return prompt.string('Your answer: ')

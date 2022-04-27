@@ -8,3 +8,5 @@
 brain-even: https://asciinema.org/a/2das2oRKSVt9hehHJJkZqzZKb
 
 brain-calc: https://asciinema.org/a/kMoCll9gQLwtyKzrJd5MyFUcD
+
+brain-gcd: https://asciinema.org/a/PSyCJdcPW2k8WugMWXJPRs5dM

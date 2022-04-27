@@ -17,8 +17,7 @@ package-uninstall:
 	pip uninstall hexlet-code
 
 package-reinstall:
-	pip uninstall hexlet-code
-	python3 -m pip install --user dist/*.whl
+	python3 -m pip install --user --force-reinstall dist/*.whl
 
 lint:
 	poetry run flake8 brain_games
