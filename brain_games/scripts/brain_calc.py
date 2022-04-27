@@ -10,7 +10,6 @@ def main():
     name = game.hello()
 
     print('What is the result of the expression?')
-    # points = game.calc(name, 1, 10, max_points)
     while points < max_points:
         num1, num2, correct_answer, operand = game.calc(min_num, max_num)
         input_user = game.question(f'{num1}{operand}{num2}')

@@ -10,7 +10,6 @@ def main():
     name = game.hello()
 
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    # points = game.even(name, 1, 100, max_points)
     while points < max_points:
         num, correct_answer = game.even(min_num, max_num)
         input_user = game.question(f'{num}')
