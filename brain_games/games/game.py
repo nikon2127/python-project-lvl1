@@ -62,6 +62,21 @@ def progression(min_num, max_num, min_step, max_step, row):
     return (quest.strip(), correct_answer)
 
 
+def prime(min_num, max_num):
+    num = random.randint(min_num, max_num)
+    correct_answer = 'yes' if is_prime(num) else 'no'
+    return (num, correct_answer)
+
+
+def is_prime(num):
+    i = 2
+    while i < num ** 0.5:
+        if num % i == 0:
+            return False
+        i += 1
+    return True
+
+
 def question(quest):
     print(f'Question: {quest}')
     return prompt.string('Your answer: ')
