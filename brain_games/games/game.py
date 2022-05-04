@@ -44,10 +44,10 @@ def gcd(min_num, max_num):
         i += 1
 
 
-def progression(min_num, max_num, min_step, max_step, row):
+def progression(max_num, max_step, row):
     colon = random.randint(1, row)
-    step = random.randint(min_step, max_step)
-    start_num = random.randint(min_num, max_num)
+    step = random.randint(1, max_step)
+    start_num = random.randint(1, max_num)
     quest = ''
     i = 1
     while i <= row:
